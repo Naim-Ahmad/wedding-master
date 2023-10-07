@@ -1,0 +1,15 @@
+{
+  "about_us": {
+    "company_name": "[Your Company Name]",
+    "founded_year": "[Year]",
+    "description": "At [Your Company Name], our journey began with a passion for creating unforgettable wedding experiences. Founded in [Year], we started as a small team of dedicated professionals who believed in the magic of weddings. Over the years, our commitment to excellence and unwavering dedication to our clients have shaped us into a leading name in the wedding industry.",
+    "services": "From our first wedding planning project to capturing countless heartfelt moments through photography, crafting exquisite floral arrangements, and serving gourmet dishes that delight the senses, every step of our journey has been driven by a love for love itself.",
+    "growth": "Our growth and success have been fueled by the trust of our clients, the creativity of our team, and the joy we find in being part of the most important day in people's lives. Today, [Your Company Name] stands as a testament to our belief that weddings should be as unique as the couples they celebrate.",
+    "about_image_1": "https://i.ibb.co/9bMkJP3/about-us-min.jpg"
+  },
+  "mission_and_vision": {
+    "mission": "Our mission is to create unforgettable wedding experiences that celebrate love, joy, and individuality. We are dedicated to providing exceptional wedding services that exceed our clients' expectations, making their dream weddings a reality.",
+    "vision": "Our vision is to be the trusted partner of every couple embarking on their journey to marital bliss. We aspire to set the standard for creativity, innovation, and excellence in the wedding industry, leaving a trail of cherished memories in every celebration we touch.",
+    "end": "At the heart of our mission and vision is a deep love for love itself. We believe that every couple's love story is unique and deserves to be celebrated in a way that reflects their personalities and dreams. Our commitment to creativity, attention to detail, and unwavering dedication to our clients stem from this belief. We are driven by the joy of being part of one of the most important days in people's lives and the privilege of turning their dreams into reality."
+  }
+}

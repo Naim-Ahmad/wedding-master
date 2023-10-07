@@ -7,6 +7,10 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'banner-image': "url('https://i.ibb.co/ZW0HZVc/Banner-min.jpg')",
+        'footer-texture': "url('/img/footer-texture.png')",
+      },
       fontFamily: {
         title: 'Bebas Neue, sans-serif',
         primary: 'Montserrat, sans-serif',

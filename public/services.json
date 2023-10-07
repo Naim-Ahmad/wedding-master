@@ -1,0 +1,128 @@
+[
+  {
+    "_id": "1",
+    "title": "Full-Service Wedding Planning",
+    "details": {
+      "description": "Our team of experienced wedding planners is dedicated to turning your dream wedding into a reality. We offer comprehensive wedding planning services that cover everything from venue selection and vendor coordination to budget management and day-of coordination. We'll work closely with you to ensure that every detail, no matter how small, is meticulously planned and executed, allowing you to relax and enjoy a stress-free wedding day.",
+      "key_features": [
+        "Venue selection assistance",
+        "Vendor coordination",
+        "Budget management",
+        "Day-of coordination"
+      ],
+      "pricing": "Starting at $5,000",
+      "duration": "6-12 months",
+      "customization": "Tailored to your preferences",
+      "contact_info": {
+        "email": "info@weddingplanners.com",
+        "phone": "+1 (123) 456-7890"
+      }
+    },
+    "image_url": "https://i.ibb.co/ZW0HZVc/Banner-min.jpg"
+  },
+  {
+    "_id": "2",
+    "title": "Professional Wedding Photography",
+    "details": {
+      "description": "Our team of talented photographers is passionate about capturing the most memorable moments of your wedding day. We offer a range of photography services, including engagement photoshoots, candid shots, and formal portraits. With state-of-the-art equipment and a keen eye for detail, we'll create stunning visual memories that you'll cherish for a lifetime.",
+      "key_features": [
+        "Engagement photoshoots",
+        "Candid shots",
+        "Formal portraits",
+        "High-resolution images"
+      ],
+      "pricing": "Starting at $2,500",
+      "duration": "Full wedding day coverage",
+      "customization": "Choice of photo styles",
+      "contact_info": {
+        "email": "photography@weddings.com",
+        "phone": "+1 (123) 555-6789"
+      }
+    },
+    "image_url": "https://i.ibb.co/G9Nm0wb/Professional-Wedding-Photography-min.jpg"
+  },
+  {
+    "_id": "3",
+    "title": "Gourmet Catering Services",
+    "details": {
+      "description": "Elevate your wedding reception with our gourmet catering services. Our team of skilled chefs is dedicated to creating a culinary experience that will delight your guests. We work closely with you to craft a customized menu that suits your taste and dietary preferences. From appetizers to desserts, our exquisite dishes are made with the finest ingredients and presented with style.",
+      "key_features": [
+        "Customized menu",
+        "Skilled chefs",
+        "Exquisite dishes",
+        "Dietary preferences"
+      ],
+      "pricing": "Customized quotes",
+      "duration": "Depends on event size",
+      "customization": "Tailored menus",
+      "contact_info": {
+        "email": "catering@weddings.com",
+        "phone": "+1 (123) 789-0123"
+      }
+    },
+    "image_url": "https://i.ibb.co/bHbxFjr/ourmet-Catering-Services-min.jpg"
+  },
+  {
+    "_id": "4",
+    "title": "Floral and Decor Design",
+    "details": {
+      "description": "Transform your wedding venue into a breathtaking masterpiece with our floral and decor design services. Our talented team specializes in creating awe-inspiring floral arrangements, stunning centerpieces, elegant arches, and captivating table settings. We work closely with you to understand your wedding theme and color palette, ensuring that every detail is meticulously crafted to enhance the beauty of your celebration.",
+      "key_features": [
+        "Floral arrangements",
+        "Centerpieces",
+        "Arches",
+        "Table settings"
+      ],
+      "pricing": "Starting at $1,500",
+      "duration": "Depends on setup complexity",
+      "customization": "Theme-based designs",
+      "contact_info": {
+        "email": "florals@weddings.com",
+        "phone": "+1 (123) 987-6543"
+      }
+    },
+    "image_url": "https://i.ibb.co/w4GXBDD/Floral-and-Decor-min.jpg"
+  },
+  {
+    "_id": "5",
+    "title": "Live Music and Entertainment",
+    "details": {
+      "description": "Create a lively and memorable atmosphere at your wedding with our live music and entertainment offerings. Whether you prefer a live band, solo artist, or a professional DJ, we have the talent to keep your guests entertained throughout the event. Our entertainers will work with you to curate the perfect playlist, and we can even provide interactive experiences to add a unique touch to your celebration.",
+      "key_features": [
+        "Live bands",
+        "Solo artists",
+        "Professional DJs",
+        "Interactive experiences"
+      ],
+      "pricing": "Starting at $1,200",
+      "duration": "Up to 6 hours",
+      "customization": "Playlist customization",
+      "contact_info": {
+        "email": "entertainment@weddings.com",
+        "phone": "+1 (123) 456-7890"
+      }
+    },
+    "image_url": "https://i.ibb.co/0n3HtW0/jeremy-wong-weddings-K8-Ki-CHh4-WU4-unsplash-min.jpg"
+  },
+  {
+    "_id": "6",
+    "title": "Custom Wedding Cakes and Desserts",
+    "details": {
+      "description": "Our dedicated pastry chefs take pride in crafting exquisite wedding cakes and desserts that not only look stunning but also taste heavenly. From elegant tiered cakes to whimsical dessert buffets, we offer a wide range of options to satisfy your sweet cravings. We pay meticulous attention to design details, ensuring that your cake becomes a centerpiece of your reception and leaves a lasting impression.",
+      "key_features": [
+        "Customized cakes",
+        "Dessert buffets",
+        "Design details",
+        "Delicious flavors"
+      ],
+      "pricing": "Starting at $500",
+      "duration": "Depends on cake complexity",
+      "customization": "Flavor and design choices",
+      "contact_info": {
+        "email": "cakes@weddings.com",
+        "phone": "+1 (123) 567-8901"
+      }
+    },
+    "image_url": "https://i.ibb.co/ZW0HZVc/Banner-min.jpg"
+  }
+]

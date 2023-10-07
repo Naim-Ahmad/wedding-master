@@ -7,3 +7,12 @@
 .active {
    color: rgb(14, 116, 144)
 }
+
+.banner-image{
+   background-image: url('https://i.ibb.co/ZW0HZVc/Banner-min.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.7);
+}
