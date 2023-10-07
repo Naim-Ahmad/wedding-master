@@ -3,45 +3,48 @@ import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 
 export default function SocialAuth() {
-    const { continueWithGoogle, continueWithFacebook } = useContext(AuthContext)
-    
+  const { continueWithGoogle, continueWithFacebook } = useContext(AuthContext)
+  const navigate = useNavigate()
+  
     const handleSocialLogin = (socialLoginFunc) => {
-        socialLoginFunc()
-            .then(userCredential => {
-                console.log(userCredential.user)
-                toast.success('Login Succuss!')
-            })
-            .catch(err => {
-                console.error(err)
-                toast.error(err.code)
+      socialLoginFunc()
+        .then(() => {
+          toast.success('Login Successful!')
+          navigate('/')
         })
+        .catch(err => {
+          console.log(err)
+          toast.error(err.code)
+      })
     }
   return (
     <div className='space-y-3'>
           <Button
-                  pill
-              className='w-full'
-              onClick={()=> handleSocialLogin(continueWithFacebook)}
-              >
-                    <FaFacebook />
+              pill
+              color="light"
+            className='w-full'
+            onClick={()=> handleSocialLogin(continueWithFacebook)}
+            >
+                <FaFacebook className='mr-2 text-xl'/>
                   <p>
                       Continue With facebook
                   </p>
-              </Button>
+            </Button>
           <Button
-                  color="light"
-                  pill
-              className='w-full'
-              onClick={()=> handleSocialLogin(continueWithGoogle)}
-              >
-                  <FcGoogle /> 
-                  <p>
-                      Continue With Google
-                  </p>
-              </Button>
+            color="light"
+            pill
+            className='w-full'
+            onClick={()=> handleSocialLogin(continueWithGoogle)}
+            >
+                <FcGoogle className='mr-2 text-xl'/> 
+                <p>
+                    Continue With Google
+                </p>
+            </Button>
         </div>
   )
 }

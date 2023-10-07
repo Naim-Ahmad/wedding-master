@@ -1,7 +1,24 @@
-import { Button, Navbar } from 'flowbite-react';
+import { Avatar, Button, Navbar } from 'flowbite-react';
+import { useContext } from 'react';
+import toast from 'react-hot-toast';
 import { Link, NavLink } from 'react-router-dom';
+import { AuthContext } from '../contexts/AuthProvider';
 
 export default function MyNavbar() {
+  const { user, logOut } = useContext(AuthContext)
+  
+   const  handleLogOut = ()=>{
+    logOut()
+    .then(() => {
+      toast.success('Logout Successful!')
+      
+    })
+    .catch(err => {
+      console.log(err)
+      toast.error(err.code)
+  })
+   }
+  
   return (
     <Navbar
       fluid
@@ -14,12 +31,21 @@ export default function MyNavbar() {
         </span>
       </Link>
       <div className="flex md:order-2">
-        <Link to="/login">
+        {
+         user && (user.photoURL ? <Avatar className='mr-3' img={user?.photoURL} rounded /> : <h1>{ user.displayName.split(' ')[0] }</h1>)
+        }
+        {
+          user ? 
+          <Button onClick={handleLogOut}>
+            Logout
+          </Button>
+          : <Link to="/login">
           <Button>
             Login
           </Button>
         </Link>
-        <Navbar.Toggle />
+        }
+        <Navbar.Toggle  className='ml-3'/>
       </div>
       <Navbar.Collapse>
         <NavLink to="/">
