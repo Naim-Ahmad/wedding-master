@@ -1,4 +1,4 @@
-import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut } from 'firebase/auth'
+import { FacebookAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from 'firebase/auth'
 import PropTypes from 'prop-types'
 import React, { useEffect, useState } from 'react'
 import auth from '../firebase/firebase.config'
@@ -11,16 +11,7 @@ export default function AuthProvider({ children }) {
     const [loading, setLoading] = useState(true)
 
     const loginWithEmailAndPassword = (email, password) => {
-        let response = null;
-        signInWithEmailAndPassword(auth, email, password)
-            .then(() => {
-                response = {code: 200, message: "Login Successful!"}
-            })
-            .catch(err => {
-                console.error(err)
-                response = err;
-            })
-        return response;
+       return signInWithEmailAndPassword(auth, email, password)
     }
 
     const registerWithEmailAndPassword = (email, password) => {
@@ -35,6 +26,12 @@ export default function AuthProvider({ children }) {
     const continueWithFacebook = () => {
         const provider = new FacebookAuthProvider()
         return signInWithPopup(auth, provider)
+    }
+
+    const setUserName = (name) => {
+        return updateProfile(auth.currentUser, {
+            displayName: name
+        })
     }
 
     const logOut = () => {
@@ -56,6 +53,7 @@ export default function AuthProvider({ children }) {
         registerWithEmailAndPassword,
         continueWithGoogle,
         continueWithFacebook,
+        setUserName,
         logOut
     }
 
