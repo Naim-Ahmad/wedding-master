@@ -1,15 +1,17 @@
 import About from "./About";
 import Header from "./Header";
-import Serices from "./Services";
+import Services from "./Services";
+import Testimonials from "./Testimonials";
 
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <main className="max-w-7xl mx-auto px-6">
+      <main>
         <About />
-        <Serices/>
+        <Services />
+        <Testimonials/>
       </main>
     </div>
   )

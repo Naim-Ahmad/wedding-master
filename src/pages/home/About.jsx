@@ -10,7 +10,7 @@ export default function About() {
     }, [])
   
   return (
-    <section className="my-16">
+    <section className="my-16 max-w-7xl mx-auto px-6">
           <h1 className="text-5xl text-center font-extrabold mb-8"><span className="text-cyan-700">About</span> Us</h1>
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div data-aos="fade-right" className="flex-1">

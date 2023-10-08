@@ -19,7 +19,7 @@ export default function Services() {
   }, [])
  
   return (
-    <section className="my-16">
+    <section className="my-16 max-w-7xl mx-auto px-6">
       <h1 className="text-5xl text-center font-extrabold mb-8">Our <span className="text-cyan-700">Services</span></h1>
       
         {loading ? <Spinner />: <div data-aos="fade-up" data-aos-duration="1000" className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
