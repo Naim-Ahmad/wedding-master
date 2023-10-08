@@ -1,0 +1,24 @@
+{
+  "testimonials": [
+    {
+      "name": "Jane Smith",
+      "testimonial": "I can't thank [Your Company Name] enough for making our wedding day absolutely perfect! From the initial planning stages to the last dance, they were there every step of the way. The attention to detail and dedication to our vision was truly remarkable. Our guests couldn't stop raving about the beautiful decor and delicious catering. We're forever grateful!"
+    },
+    {
+      "name": "John and Emily",
+      "testimonial": "Working with [Your Name] as our wedding photographer was an absolute pleasure. Their professionalism and creativity shone through in every shot. They captured the essence of our love story beautifully. Our wedding album is a treasure we'll cherish forever. Thank you, [Your Name], for making our day unforgettable."
+    },
+    {
+      "name": "David and Maria",
+      "testimonial": "[Your Company Name] exceeded our expectations in every way possible. From the first meeting to the grand finale, their team was phenomenal. The floral arrangements were stunning, and the live music created a magical atmosphere. Our wedding was a dream come true, thanks to [Your Company Name]."
+    },
+    {
+      "name": "Sarah Brown",
+      "testimonial": "I hired [Your Name] for my bridal makeup, and I couldn't be happier with the results. They listened to my preferences and created a look that was both natural and elegant. I felt like a princess on my special day. Thank you for making me look and feel beautiful!"
+    },
+    {
+      "name": "Michael and Lisa",
+      "testimonial": "Choosing [Your Company Name] for our wedding planning was the best decision we made. They turned our vision into reality, and the day went off without a hitch. Their attention to detail, organization, and vendor coordination were impeccable. We were stress-free and able to enjoy every moment."
+    }
+  ]
+}

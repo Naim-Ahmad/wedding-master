@@ -49,6 +49,7 @@ export default function AuthProvider({ children }) {
     const authInfo = {
         user,
         loading,
+        setLoading,
         loginWithEmailAndPassword,
         registerWithEmailAndPassword,
         continueWithGoogle,

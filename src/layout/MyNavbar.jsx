@@ -24,7 +24,7 @@ export default function MyNavbar() {
     <Navbar
       fluid
       rounded
-      className='shadow-lg'
+      className='shadow-lg fixed w-full z-20'
     >
       <Link to="/">
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">

@@ -10,9 +10,16 @@
 
 .banner-image{
    background-image: url('https://i.ibb.co/ZW0HZVc/Banner-min.jpg');
+}
+
+.banner-image, .bg-image{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
     background-color: rgba(0, 0, 0, 0.7);
+}
+
+.bg-image{
+   background-color: rgba(0, 0, 0, 0.6);
 }

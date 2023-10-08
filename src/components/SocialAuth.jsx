@@ -3,18 +3,18 @@ import { useContext } from 'react';
 import toast from 'react-hot-toast';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../contexts/AuthProvider';
 
 export default function SocialAuth() {
   const { continueWithGoogle, continueWithFacebook } = useContext(AuthContext)
   const navigate = useNavigate()
-  
+  const {state} = useLocation()
     const handleSocialLogin = (socialLoginFunc) => {
       socialLoginFunc()
         .then(() => {
           toast.success('Login Successful!')
-          navigate('/')
+          state ? navigate(state) : navigate('/')
         })
         .catch(err => {
           console.log(err)

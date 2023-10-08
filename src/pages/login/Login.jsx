@@ -2,7 +2,7 @@
 import { Button } from 'flowbite-react'
 import { useContext } from 'react'
 import toast from 'react-hot-toast'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useLocation, useNavigate } from 'react-router-dom'
 import DividerOr from '../../components/DividerOr'
 import Input from '../../components/Input'
 import SocialAuth from '../../components/SocialAuth'
@@ -12,6 +12,7 @@ import { AuthContext } from '../../contexts/AuthProvider'
 export default function Login() {
   const { loginWithEmailAndPassword } = useContext(AuthContext)
   const navigate = useNavigate()
+  const { state } = useLocation()
 
   const handleLogin = (e) => {
     e.preventDefault()
@@ -23,7 +24,7 @@ export default function Login() {
     loginWithEmailAndPassword(email, password)
       .then(() => {
         toast.success('Login Successful!')
-        navigate('/')
+        state ? navigate(state) : navigate('/')
       })
       .catch(err => {
         console.log(err.code)
