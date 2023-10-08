@@ -56,17 +56,11 @@ export default function MyNavbar() {
             Home
           </p>
         </NavLink>
-        <NavLink to="/about">
-          About
+        <NavLink to="/gallery">
+          Gallery
         </NavLink>
-        <NavLink to="/services">
-          Services
-        </NavLink>
-        <NavLink to="/pricing">
-          Pricing
-        </NavLink>
-        <NavLink to="/contact">
-          Contact
+        <NavLink to="/dashboard">
+          Dashboard
         </NavLink>
       </Navbar.Collapse>
     </Navbar>

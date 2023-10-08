@@ -3,12 +3,14 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 function ServiceCard({ service }) {
-    const {_id, image_url, title, details } = service;
+  const { _id, image_url, title, details, animation } = service;
+
     const bgImage = {
         backgroundImage: `url('${image_url}')`
     }
   return (
-    <Card
+    <div data-aos={animation}>
+      <Card
     imgAlt={ title }
     className={`bg-image text-white`}
     style={bgImage}
@@ -21,7 +23,7 @@ function ServiceCard({ service }) {
       </h5>
     </Link>
     <div className="mb-5 mt-2.5 flex items-center">
-        <p className='text-justify'>{ details?.description.slice(0, 200)}...</p>
+        <p className='text-justify'>{ details?.description.slice(0, 190)}...</p>
     </div>
     <div className="flex justify-center items-center gap-8">
       
@@ -34,7 +36,8 @@ function ServiceCard({ service }) {
         </p>
       </Link>
     </div>
-  </Card>
+    </Card>
+    </div>
   )
 }
 

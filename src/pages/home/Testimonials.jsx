@@ -21,31 +21,31 @@ export default function Testimonials() {
 
     return (
       <section className=" banner-image testimonial-banner" style={{backgroundImage: `url('${testimonials?.banner}')`}}>
-      <div>
-        <h2>TESTIMONIALS</h2>
-        <h2 className="text-4xl font-bold text-gray-300 text-center mb-16">What Our Customers Say</h2>
-    </div>
-            <div >
+            <div className="max-w-7xl mx-auto">
+            <div className="font-bold text-gray-300 text-center pt-10">
+                <h2>TESTIMONIALS</h2>
+                <h2 className="text-4xl py-8">What Our Customers Say</h2>
+            </div>
             <Swiper
-    spaceBetween={50}
-          slidesPerView={2}
-          navigation
-      pagination={{ clickable: true }}
-    modules={[Navigation, Pagination]}
-    onSlideChange={() => console.log('slide change')}
-    onSwiper={(swiper) => console.log(swiper)}
-      >
-          
-                {
-                    testimonials?.testimonials?.map((test, ind) => (
-                        <SwiperSlide key={ind}>
-                            <TestimonialCard testimonial={ test } />
-                        </SwiperSlide>
-                    ))
-        }
-     
-  </Swiper>
-    </div>
+                spaceBetween={50}
+                slidesPerView={2}
+                navigation
+                pagination={{ clickable: true }}
+                modules={[Navigation, Pagination]}
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                >
+            
+                    {
+                        testimonials?.testimonials?.map((test, ind) => (
+                            <SwiperSlide key={ind}>
+                                <TestimonialCard testimonial={ test } />
+                            </SwiperSlide>
+                        ))
+                    }
+                
+            </Swiper>
+      </div>
       </section>
     
   )
