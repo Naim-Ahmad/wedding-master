@@ -8,7 +8,7 @@ export default function Gallery() {
     <main>
     <div className="profile-container pt-16 px-8">
       <div className="profile-photo">
-        <img src={user?.photoURL || "https://graph.facebook.com/276753505267036/picture"} alt="Profile photo"/>
+        <img className="w-full" src={user?.photoURL || "https://graph.facebook.com/276753505267036/picture"} alt="Profile photo"/>
       </div>
               <h1 className="profile-name mt-3">{ user.displayName }</h1>
       <p className="description">Dhaka, Bangladesh</p>
@@ -28,12 +28,12 @@ export default function Gallery() {
       </div>
     </div>
     <div className="gallery-container max-w-3xl mx-auto grid-cols-1">
-      <div className="gallery-item"><img src="https://i.ibb.co/2qz8gPz/indian-wedding-bangles-mehandi-henna-coloured-hands-with-reflective-ornament-min.jpg" alt=""/></div>
-      <div className="gallery-item"><img src="https://i.ibb.co/dQ4N1Vy/frontview-traditional-indian-men-clothes-min.jpg" alt=""/></div>
-      <div className="gallery-item"><img src="https://i.ibb.co/QJt5zPM/room-with-flowers-min.jpg" alt=""/></div>
-      <div className="gallery-item"><img src="https://i.ibb.co/3f9bjY6/traditional-indian-men-clothes-pagri-turban-min.jpg" alt="/"/></div>
-      <div className="gallery-item"><img src="https://i.ibb.co/rMD5mxw/young-muslim-bride-groom-wedding-min.jpg" alt=""/></div>
-      <div className="gallery-item"><img src="https://i.ibb.co/4ZX5FPQ/young-muslim-bride-groom-wedding-photos-min.jpg" alt=""/></div>
+      <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/2qz8gPz/indian-wedding-bangles-mehandi-henna-coloured-hands-with-reflective-ornament-min.jpg" alt=""/></div>
+      <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/dQ4N1Vy/frontview-traditional-indian-men-clothes-min.jpg" alt=""/></div>
+      <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/QJt5zPM/room-with-flowers-min.jpg" alt=""/></div>
+      <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/3f9bjY6/traditional-indian-men-clothes-pagri-turban-min.jpg" alt="/"/></div>
+      <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/rMD5mxw/young-muslim-bride-groom-wedding-min.jpg" alt=""/></div>
+      <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/4ZX5FPQ/young-muslim-bride-groom-wedding-photos-min.jpg" alt=""/></div>
     </div>
    </main>
   )

@@ -12,7 +12,7 @@ function ServiceCard({ service }) {
     <div data-aos={animation}>
       <Card
     imgAlt={ title }
-    className={`bg-image text-white`}
+    className={`bg-image text-white h-96`}
     style={bgImage}
   >
     <Link to={`/details/${_id}`}>
@@ -22,9 +22,10 @@ function ServiceCard({ service }) {
         </p>
       </h5>
     </Link>
-    <div className="mb-5 mt-2.5 flex items-center">
+    <div className="mb-5 mt-2.5 flex items-center flex-1">
         <p className='text-justify'>{ details?.description.slice(0, 190)}...</p>
-    </div>
+        </div>
+        
     <div className="flex justify-center items-center gap-8">
       
       <Link

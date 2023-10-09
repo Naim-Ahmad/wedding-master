@@ -10,6 +10,8 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import TestimonialCard from "./TestimonialCard";
 
+const animation = ["fade-right", "fade-left"]
+
 export default function Testimonials() {
     const [testimonials, setTestimonials] = useState(null)
     useEffect(() => {
@@ -39,7 +41,7 @@ export default function Testimonials() {
                     {
                         testimonials?.testimonials?.map((test, ind) => (
                             <SwiperSlide key={ind}>
-                                <TestimonialCard testimonial={ test } />
+                                <TestimonialCard testimonial={ test } animation={animation[ind]} />
                             </SwiperSlide>
                         ))
                     }

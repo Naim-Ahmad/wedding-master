@@ -7,6 +7,7 @@ import { AuthContext } from '../contexts/AuthProvider';
 export default function MyNavbar() {
   const { user, logOut } = useContext(AuthContext)
   const navigate = useNavigate()
+  console.log(user)
   
    const  handleLogOut = ()=>{
     logOut()
@@ -28,7 +29,7 @@ export default function MyNavbar() {
     >
       <Link to="/">
         <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
-         Wedding <span className='text-cyan-700'>Boss</span>
+         Wedding <span className='text-cyan-700'>Master</span>
         </span>
       </Link>
       <div className="flex md:order-2">
