@@ -28,14 +28,14 @@ export default function Dashboard() {
       const cashAdvance = Number(d.cashAdvance)
       totalCashAdvance += cashAdvance
     })
-    const userData = data.filter(d => d?.email === user.email)
+    const userData = data?.filter(d => d?.email === user.email)
+   
     if (userData.length) {
-      setUserData(data)
+      setUserData(userData)
       setTotalCashAdvance(totalCashAdvance)
       setTotalAmount(totalAmount)
     }
   }, [])
-
   
   return (
     <main className="min-h-[80vh]">

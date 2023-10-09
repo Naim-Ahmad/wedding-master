@@ -17,7 +17,7 @@ export default function About() {
                 <img className="rounded-lg" src={about?.about_us?.about_image_1} alt="About us" />
             </div>
             <div data-aos="fade-left" className="flex-1 space-y-6">
-              <h1 className="text-2xl font-bold">C+ompany History</h1>
+              <h1 className="text-2xl font-bold">Company History</h1>
               <p>{about?.about_us?.description}</p>
               <p>{about?.about_us?.growth}</p>
               <p>{about?.about_us?.services}</p>

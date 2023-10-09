@@ -1,28 +1,24 @@
 'use client';
 
 import { Footer } from 'flowbite-react';
+import { Link } from 'react-router-dom';
 
 export default function MyFooter() {
   return (
     <Footer container>
       <Footer.Copyright
-        by="Wedding Boss"
+        by="Wedding Master"
         href="#"
-        year={2022}
+        year={2023}
+        color='dark'
       />
       <Footer.LinkGroup>
-        <Footer.Link href="#">
-          About
-        </Footer.Link>
-        <Footer.Link href="#">
-          Privacy Policy
-        </Footer.Link>
-        <Footer.Link href="#">
-          Licensing
-        </Footer.Link>
-        <Footer.Link href="#">
-          Contact
-        </Footer.Link>
+          <Link className='mr-3' to="/gallery">
+            Gallery
+          </Link>
+          <Link to="/dashboard">
+            Dashboard
+          </Link>
       </Footer.LinkGroup>
     </Footer>
   )
