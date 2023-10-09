@@ -1,14 +1,15 @@
-import { Avatar, Progress } from 'flowbite-react'
+import { Avatar } from 'flowbite-react'
+import PropTypes from 'prop-types'
 import { useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthProvider'
 
-function UserDetails(props) {
+function UserDetails({totalAmount, cashAdvance,  projectsCounties}) {
     const { user } = useContext(AuthContext)
     const created = new Date(Number(user?.metadata?.createdAt))
     const lastLogged = new Date(Number(user?.metadata?.lastLoginAt))
 
   return (
-    <div className="flex flex-col items-center gap-4  rounded-3xl bg-gray-100 p-6 border">
+    <div className="flex flex-col items-center gap-4  rounded-3xl bg-gray-100 p-6">
                 <Avatar img={user?.photoURL} size="lg" rounded/>
                 <div className="text-center font-semibold">
                   <h1>{user?.displayName}</h1>
@@ -20,36 +21,27 @@ function UserDetails(props) {
               </div>
               <div className="flex gap-4">
                 <div className="bg-gray-300 rounded-xl px-8 py-2 text-center">
-                  <p className="font-bold text-2xl">3</p>
+          <p className="font-bold text-2xl">{ projectsCounties || '0'}</p>
                   <p className="text-sm text-gray-500">Active Projects</p>
                 </div>
                 <div className="bg-gray-300 rounded-xl px-8 py-2 text-center">
-                  <p className="font-bold text-2xl">3</p>
+                  <p className="font-bold text-2xl">${totalAmount}</p>
                   <p className="text-sm text-gray-500">Total Amount</p>
                 </div>
                 <div className="bg-gray-300 rounded-xl px-8 py-2 text-center">
-                  <p className="font-bold text-2xl">3</p>
-                  <p className="text-sm text-gray-500">Paid Amount</p>
+                <p className="font-bold text-2xl">${ cashAdvance }</p>
+                  <p className="text-sm text-gray-500">Cash Advance</p>
                 </div>
 
               </div>
-
-              <div className="w-full">
-              <Progress
-                labelProgress
-                labelText
-                progress={45}
-                progressLabelPosition="inside"
-                size="xl"
-                textLabel="Average Project Done"
-                textLabelPosition="outside"
-              />
-              </div>
-              
-            </div>
+    </div>
   )
 }
 
-UserDetails.propTypes = {}
+UserDetails.propTypes = {
+  totalAmount: PropTypes.number,
+  cashAdvance: PropTypes.number,
+  projectsCounties: PropTypes.number,
+}
 
 export default UserDetails

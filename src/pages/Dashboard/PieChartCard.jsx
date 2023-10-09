@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import { Cell, Pie, PieChart } from 'recharts';
 
-function PieChartCard({ data, projectName, price, duration }) {
+function PieChartCard({ data: userData }) {
+  const { projectName, price, fromDate, toDate } = userData;
+  console.log(userData, price)
+    const data = [
+      { name: 'Done', value: Math.floor(Math.random() * 100) },
+      { name: 'Pending', value: Math.floor(Math.random() * 100) },
+    ];
     const COLORS = ['#0088FE', '#FF8042', '#00C49F', '#FFBB28'];
   
     const RADIAN = Math.PI / 180;
@@ -17,10 +23,10 @@ function PieChartCard({ data, projectName, price, duration }) {
       );
     };
   return (
-    <div className="flex flex-col items-center gap-4  rounded-3xl bg-gray-100 p-6 border">
+    <div className="flex flex-col items-center gap-4  rounded-3xl bg-gray-100 p-6">
               <div className="text-center">
               <h1 className="text-3xl font-bold mb-3 ">{ projectName}</h1>
-              <p className=" text-sm text-gray-500 font-bold">Duration: { duration }</p>
+        <p className=" text-sm text-gray-500 font-bold">Duration: {fromDate} <span className="text-black"> To</span> { toDate}</p>
               <p className=" text-sm text-gray-500 font-bold">Price: { price }</p>
               </div>
 
@@ -58,10 +64,7 @@ function PieChartCard({ data, projectName, price, duration }) {
 }
 
 PieChartCard.propTypes = {
-    data: PropTypes.array,
-    projectName: PropTypes.string,
-    price: PropTypes.string,
-    duration: PropTypes.string,
+    data: PropTypes.object,
 }
 
 export default PieChartCard
