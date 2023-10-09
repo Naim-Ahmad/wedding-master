@@ -9,7 +9,7 @@ function UserDetails({totalAmount, cashAdvance,  projectsCounties}) {
     const lastLogged = new Date(Number(user?.metadata?.lastLoginAt))
 
   return (
-    <div className="flex flex-col items-center gap-4  rounded-3xl bg-gray-100 p-6">
+    <div className="flex flex-col items-center gap-4 overflow-x-hidden rounded-3xl bg-gray-100 p-6">
                 <Avatar img={user?.photoURL} size="lg" rounded/>
                 <div className="text-center font-semibold">
                   <h1>{user?.displayName}</h1>
@@ -19,9 +19,9 @@ function UserDetails({totalAmount, cashAdvance,  projectsCounties}) {
                   <p>Created Account at {created.toLocaleDateString()}</p>
                   <p>Last Login at {lastLogged.toLocaleTimeString()}</p>
               </div>
-              <div className="flex gap-4">
+              <div className="flex flex-col md:flex-row gap-4">
                 <div className="bg-gray-300 rounded-xl px-8 py-2 text-center">
-          <p className="font-bold text-2xl">{ projectsCounties || '0'}</p>
+                  <p className="font-bold text-2xl">{ projectsCounties || '0'}</p>
                   <p className="text-sm text-gray-500">Active Projects</p>
                 </div>
                 <div className="bg-gray-300 rounded-xl px-8 py-2 text-center">
@@ -29,7 +29,7 @@ function UserDetails({totalAmount, cashAdvance,  projectsCounties}) {
                   <p className="text-sm text-gray-500">Total Amount</p>
                 </div>
                 <div className="bg-gray-300 rounded-xl px-8 py-2 text-center">
-                <p className="font-bold text-2xl">${ cashAdvance }</p>
+                  <p className="font-bold text-2xl">${ cashAdvance }</p>
                   <p className="text-sm text-gray-500">Cash Advance</p>
                 </div>
 

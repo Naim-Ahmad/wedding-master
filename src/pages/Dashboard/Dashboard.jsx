@@ -38,15 +38,13 @@ export default function Dashboard() {
   }, [])
   
   return (
-    <main className="min-h-[80vh]">
+    <main className="min-h-[80vh] px-6 overflow-x-hidden">
       <section>
-        <div className="flex gap-6 py-10">
-        
-            
+        <div className="flex flex-col-reverse lg:flex-row gap-6 py-10">
           {userData?.length ? 
-              <div className="flex-1 grid grid-cols-2 gap-4">{userData?.map(data => <PieChartCard key={data.id} data={data} />)} </div> :<div className="min-h-screen w-full h-full text-center mt-16 text-4xl font-bold"><p>No Service here</p></div>}
+              <div className="lg:flex-1 md:grid grid-cols-2 gap-4">{userData?.map(data => <PieChartCard key={data.id} data={data} />)} </div> :<div className="min-h-screen w-full h-full text-center mt-16 text-4xl font-bold"><p>No Service here</p></div>}
         
-          <div className="flex-2">
+          <div className="lg:flex-2">
             <UserDetails cashAdvance={totalCashAdvance} totalAmount={totalAmount}  projectsCounties={userData?.length} />
           </div>
         </div>  

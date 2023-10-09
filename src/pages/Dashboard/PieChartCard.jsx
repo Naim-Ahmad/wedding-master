@@ -25,8 +25,8 @@ function PieChartCard({ data: userData }) {
   return (
     <div className="flex flex-col items-center gap-4  rounded-3xl bg-gray-100 p-6">
               <div className="text-center">
-              <h1 className="text-3xl font-bold mb-3 ">{ projectName}</h1>
-        <p className=" text-sm text-gray-500 font-bold">Duration: {fromDate} <span className="text-black"> To</span> { toDate}</p>
+              <h1 className="text-lg md:text-2xl lg:text-3xl font-bold mb-3 ">{ projectName}</h1>
+              <p className="text-xs sm:text-sm text-gray-500 font-bold">Duration: {fromDate} <span className="text-black"> To</span> { toDate}</p>
               <p className=" text-sm text-gray-500 font-bold">Price: { price }</p>
               </div>
 

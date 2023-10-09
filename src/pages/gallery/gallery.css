@@ -39,7 +39,7 @@
     border-radius: 16px;
   }
   .profile-info-container {
-    display: flex;
+    display: grid;
     margin-top: 24px;
     gap: 20px;
   }

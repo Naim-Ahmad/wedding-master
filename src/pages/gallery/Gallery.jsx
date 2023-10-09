@@ -5,14 +5,14 @@ import './gallery.css'
 export default function Gallery() {
     const { user } = useContext(AuthContext)
   return (
-    <main>
+    <main  className="overflow-x-hidden">
     <div className="profile-container pt-16 px-8">
       <div className="profile-photo">
         <img className="w-full" src={user?.photoURL || "https://graph.facebook.com/276753505267036/picture"} alt="Profile photo"/>
       </div>
               <h1 className="profile-name mt-3">{ user.displayName }</h1>
       <p className="description">Dhaka, Bangladesh</p>
-      <div className="profile-info-container">
+      <div className="profile-info-container grid grid-cols-1 sm:grid-cols-3">
         <div className="profile-info-item">
           <h2 className="title">Oct, 8 2023</h2>
           <p className="description">Date of Marriage</p>
@@ -27,7 +27,7 @@ export default function Gallery() {
         </div>
       </div>
     </div>
-    <div className="gallery-container max-w-7xl mx-auto grid-cols-1">
+    <div className="gallery-container max-w-7xl mx-auto grid-cols-1 px-6">
       <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/2qz8gPz/indian-wedding-bangles-mehandi-henna-coloured-hands-with-reflective-ornament-min.jpg" alt=""/></div>
       <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/dQ4N1Vy/frontview-traditional-indian-men-clothes-min.jpg" alt=""/></div>
       <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/QJt5zPM/room-with-flowers-min.jpg" alt=""/></div>
