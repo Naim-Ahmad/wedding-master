@@ -10,7 +10,7 @@ export default function About() {
     }, [])
   
   return (
-    <section className="my-16 max-w-7xl mx-auto px-6">
+    <section className="my-16 max-w-7xl mx-auto px-6 overflow-hidden">
           <h1 className="text-5xl text-center font-extrabold mb-8"><span className="text-cyan-700">About</span> Us</h1>
           <div className="flex flex-col lg:flex-row items-center gap-10">
             <div data-aos="fade-right" className="flex-1">
@@ -23,7 +23,7 @@ export default function About() {
               <p>{about?.about_us?.services}</p>
             </div>
           </div>
-          <div className="flex gap-10 flex-row-reverse items-center mt-16">
+          <div className="flex gap-10 flex-col lg:flex-row-reverse items-center mt-16">
             <div data-aos="fade-up" className="flex-1">
                 <img className="rounded-lg" src={about?.about_us?.about_image_1} alt="About us" />
             </div>

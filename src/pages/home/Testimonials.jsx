@@ -22,7 +22,7 @@ export default function Testimonials() {
     
 
     return (
-      <section className=" banner-image testimonial-banner" style={{backgroundImage: `url('${testimonials?.banner}')`}}>
+      <section className=" banner-image testimonial-banner overflow-x-hidden" style={{backgroundImage: `url('${testimonials?.banner}')`}}>
             <div className="max-w-7xl mx-auto">
             <div className="font-bold text-gray-300 text-center pt-10">
                 <h2>TESTIMONIALS</h2>
@@ -30,17 +30,23 @@ export default function Testimonials() {
             </div>
             <Swiper
                 spaceBetween={50}
-                slidesPerView={2}
+                slidesPerView={1}
                 navigation
                 pagination={{ clickable: true }}
                 modules={[Navigation, Pagination]}
                 onSlideChange={() => console.log('slide change')}
-                onSwiper={(swiper) => console.log(swiper)}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    breakpoints={{
+                        768: {
+                          slidesPerView: 2,
+                          spaceBetween: 20,
+                        }
+                      }}
                 >
             
                     {
                         testimonials?.testimonials?.map((test, ind) => (
-                            <SwiperSlide key={ind}>
+                            <SwiperSlide  key={ind}>
                                 <TestimonialCard testimonial={ test } animation={animation[ind]} />
                             </SwiperSlide>
                         ))

@@ -27,7 +27,7 @@ export default function Gallery() {
         </div>
       </div>
     </div>
-    <div className="gallery-container max-w-3xl mx-auto grid-cols-1">
+    <div className="gallery-container max-w-7xl mx-auto grid-cols-1">
       <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/2qz8gPz/indian-wedding-bangles-mehandi-henna-coloured-hands-with-reflective-ornament-min.jpg" alt=""/></div>
       <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/dQ4N1Vy/frontview-traditional-indian-men-clothes-min.jpg" alt=""/></div>
       <div className="gallery-item"><img className="w-full h-full" src="https://i.ibb.co/QJt5zPM/room-with-flowers-min.jpg" alt=""/></div>

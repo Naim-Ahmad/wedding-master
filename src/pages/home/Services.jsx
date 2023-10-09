@@ -20,9 +20,9 @@ export default function Services() {
  
   return (
     <section className="my-16 max-w-7xl mx-auto px-6">
-      <h1 className="text-5xl text-center font-extrabold mb-8">Our <span className="text-cyan-700">Services</span></h1>
+      <h1 className="text-3xl sm:text-5xl text-center font-extrabold mb-8">Our <span className="text-cyan-700">Services</span></h1>
       
-        {loading ? <Spinner />: <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {loading ? <Spinner />: <div className="grid grid-cols-1 overflow-hidden sm:grid-cols-2 lg:grid-cols-3 gap-8">
           { services?.map(service => <ServiceCard
             key={service._id}
             service={service}

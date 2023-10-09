@@ -27,19 +27,19 @@ export default function MyNavbar() {
       className='shadow-lg fixed w-full z-20'
     >
       <Link to="/">
-        <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
+        <span className="self-center whitespace-nowrap text-sm sm: font-bold text-xl font-semibold dark:text-white">
          Wedding <span className='text-cyan-700'>Master</span>
         </span>
       </Link>
       <div className="flex md:order-2">
         {
-         user && (user.photoURL ? <Avatar className='mr-3' img={user?.photoURL} rounded /> : <h1 className='font-bold pt-2'>{ user.displayName }</h1>)
+         user && (user.photoURL ? <Avatar className='sm:mr-3' img={user?.photoURL} rounded /> : <h1 className='font-bold pt-2'>{ user.displayName }</h1>)
         }
-        <div className='ml-4'>
+        <div className='ml-4 hidden sm:block'>
         {
           user ? 
           <Button onClick={handleLogOut}>
-            Logout
+            Sign out
           </Button>
           : <Link to="/login">
           <Button>
@@ -62,6 +62,17 @@ export default function MyNavbar() {
         <NavLink to="/dashboard">
           Dashboard
         </NavLink>
+        {
+          user ? 
+          <Button className='sm:hidden' onClick={handleLogOut}>
+            Sign out
+          </Button>
+          : <Link to="/login">
+          <Button className='sm:hidden'>
+            Login
+          </Button>
+        </Link>
+        }
       </Navbar.Collapse>
     </Navbar>
   )
