@@ -7,7 +7,7 @@ import { Link, NavLink } from 'react-router-dom';
 export default function MyFooter() {
   return (
     <Footer className='w-full bg-gray-200' container>
-      <div className="">
+      <div className="w-full">
         <div className="grid w-full justify-between sm:flex sm:justify-between md:flex md:grid-cols-1 gap-6">
           <div>
           <Footer.Title title="Office Address"/>

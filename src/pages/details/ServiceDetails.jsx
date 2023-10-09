@@ -12,6 +12,7 @@ import { setUserData } from '../../utils/localstorage'
 
 
 
+
 export default function ServiceDetails() {
     const [services, setServices] = useState(null)
     const [loading, setLoading] = useState(true)
@@ -50,6 +51,11 @@ export default function ServiceDetails() {
                 return 'You Must Provide Some Cash!'
               }
             }
+        })
+
+        Swal.fire({
+            icon: 'success',
+            title: 'Accepted Your Request'
         })
         
         const userData = {
