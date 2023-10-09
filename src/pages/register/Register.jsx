@@ -1,7 +1,7 @@
 import { Button } from "flowbite-react";
 import { useContext, useState } from "react";
 import toast from "react-hot-toast";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import DividerOr from "../../components/DividerOr";
 import Input from "../../components/Input";
 import SocialAuth from "../../components/SocialAuth";
@@ -18,6 +18,7 @@ export default function Register() {
   const [failure, setFailure] = useState(filedValidation)
   const { registerWithEmailAndPassword, setUserName } = useContext(AuthContext)
   const navigate = useNavigate()
+  const { state } = useLocation()
 
   const handleRegister = (e) => {
     e.preventDefault()
@@ -46,7 +47,7 @@ export default function Register() {
         setUserName(name)
           .then(() => {
             toast.success('Registration Successful!')
-            navigate('/')
+            state ? navigate(state) : navigate('/')
           })
           .catch(err => {
             console.log(err)
